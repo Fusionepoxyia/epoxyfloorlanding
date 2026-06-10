@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piso Epóxico Fácil — Kit de Recubrimiento · Fusion Epoxy</title>
+<meta name="description" content="Kit DIY de piso epóxico para hacerlo tú mismo. Acabado ultra brilloso tipo terrazo, listo en 48 horas. Rinde 35–40 m² por kit. Solo interiores.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#FF0110;--red-dk:#D60010;--blue:#033F7A;--blue-dark:#022D58;--blue-light:#0A52A0;--black:#0A0A0A;--gray-metal:#1E2124;--gray-mid:#2C2F33;--white:#FFFFFF;--cyan:#0D8FD4;--gold:#C8A84B;--muted:rgba(255,255,255,.5);--border:rgba(255,255,255,.1);--cond:'Barlow Condensed',sans-serif;--head:'Barlow Condensed',sans-serif;}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--head);font-weight:900;text-transform:uppercase;letter-spacing:.01em}
+.tag{font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.13em}
+
+/* ---- NAV ---- */
+nav{position:fixed;inset:0 0 auto 0;z-index:100;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;background:rgba(3,63,122,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.12)}
+nav img.logo{height:38px}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.lang-select{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:var(--white);padding:7px 12px;font-family:var(--cond);font-size:13px;font-weight:600;letter-spacing:.05em;border-radius:3px;cursor:pointer;outline:none}
+.lang-select:focus{border-color:var(--red)}
+.lang-select option{background:#222}
+.nav-cta{background:var(--red);color:#fff;border:none;padding:9px 22px;font-family:var(--cond);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border-radius:4px;transition:all .2s}
+.nav-cta:hover{background:var(--red-dk)}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:8px}
+.nav-burger span{display:block;height:2px;width:100%;background:#fff;border-radius:2px;transition:.25s}
+.mobile-menu{position:fixed;top:0;left:0;height:100%;width:82%;max-width:330px;background:var(--blue-dark);z-index:1000;transform:translateX(-100%);transition:transform .3s ease;padding:4.5rem 1.5rem 2rem;overflow-y:auto;-webkit-overflow-scrolling:touch;display:block}
+.mobile-menu.open{transform:translateX(0);box-shadow:8px 0 40px rgba(0,0,0,.4)}
+body.menu-open nav{opacity:0;pointer-events:none;transition:opacity .2s}
+.mobile-menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:999;opacity:0;visibility:hidden;transition:.3s}
+.mobile-menu-overlay.open{opacity:1;visibility:visible}
+.mm-close{position:absolute;top:.9rem;right:1.1rem;background:none;border:none;color:#fff;font-size:2.4rem;line-height:1;cursor:pointer;padding:0;width:40px;height:40px}
+.mm-links{display:block;margin-bottom:2rem}
+.mm-links a{display:block;font-family:var(--cond);font-size:1.05rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;text-decoration:none;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.mm-links a:active{color:var(--cyan)}
+.mm-lang{display:block}
+.mm-lang-label{display:block;font-family:var(--cond);font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:.8rem}
+.mm-lang-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.mm-lang-grid button{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;font-family:var(--cond);font-size:.8rem;font-weight:600;letter-spacing:.03em;padding:.65rem .5rem;border-radius:4px;cursor:pointer;transition:.2s;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mm-lang-grid button.active,.mm-lang-grid button:active{background:var(--red);border-color:var(--red)}
+
+/* ---- BUTTONS ---- */
+.btn-primary,.btn-outline{font-family:var(--cond);font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:13px 30px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn-primary{background:var(--blue);color:#fff;border:2px solid var(--white)}
+.btn-primary:hover{background:var(--white);color:var(--blue);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3);font-weight:600}
+.btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
+
+/* ---- HERO ---- */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;padding:0 0 0 4rem;position:relative;overflow:hidden;background:var(--black)}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0C0C0C 0%,#10131f 45%,#0C0C0C 100%);z-index:0}
+.hero-grid{position:absolute;inset:-80px 0;background-image:linear-gradient(rgba(3,63,122,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(3,63,122,.07) 1px,transparent 1px);background-size:60px 60px;z-index:0;will-change:transform}
+.hero-glow{position:absolute;top:-160px;right:-160px;width:520px;height:520px;background:radial-gradient(circle,rgba(255,1,16,.10) 0%,transparent 70%);z-index:2;pointer-events:none;will-change:transform}
+.hero-glow2{position:absolute;bottom:-160px;left:-160px;width:520px;height:520px;background:radial-gradient(circle,rgba(3,63,122,.35) 0%,transparent 70%);z-index:2;pointer-events:none;will-change:transform}
+.hero-left{position:relative;z-index:3;padding:7rem 2rem 4rem 0}
+.hero-content{position:relative;z-index:3;max-width:640px;text-align:left}
+.hero-tag{display:inline-block;font-family:var(--cond);font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:1rem}
+.hero h1{font-size:clamp(3.4rem,6.5vw,6.4rem);line-height:.82;letter-spacing:-.02em;margin-bottom:1.2rem;font-weight:900}
+.hero-sub{font-size:.95rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72);max-width:520px;line-height:1.7;margin-bottom:2.2rem}
+.brand-line{font-family:var(--cond);font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:14px;margin-bottom:2.2rem}
+.hero-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;justify-content:flex-start}
+.hero-stats{position:relative;z-index:3;display:flex;gap:2.2rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.15);flex-wrap:wrap;justify-content:flex-start;max-width:640px}
+.hero-stat strong{display:block;font-family:var(--head);font-weight:900;font-size:2.6rem;color:var(--white);line-height:1}
+.hero-stat strong .u{color:var(--red);font-size:1.5rem}
+.hero-stat span{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.hero-visual{position:relative;z-index:3;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;padding:7rem 3rem 4rem}
+.hero-prodlogo{width:min(72%,380px)}
+.hero-prodlogo .img-slot{aspect-ratio:5/2;min-height:0}
+
+/* ---- IMAGE PLACEHOLDERS ---- */
+.img-slot{position:relative;width:100%;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:rgba(255,255,255,.6);min-height:240px;overflow:hidden}
+.img-slot.show-ph{border:2px dashed rgba(255,255,255,.28);background:repeating-linear-gradient(45deg,rgba(255,255,255,.03),rgba(255,255,255,.03) 14px,rgba(255,255,255,.06) 14px,rgba(255,255,255,.06) 28px)}
+.img-slot .slot-icon{font-size:2.2rem;margin-bottom:.6rem;opacity:.55}
+.img-slot .slot-name{font-family:var(--cond);font-weight:700;font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.img-slot .slot-spec{font-family:var(--cond);font-size:.72rem;font-weight:600;letter-spacing:.08em;color:var(--cyan);margin-top:.35rem}
+.img-slot.hero-slot{aspect-ratio:1/1;min-height:380px}
+/* rotador automático de 3 vistas en el hero */
+.hero-rotator .rot-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .8s ease;z-index:1}
+.hero-rotator .rot-img.active{opacity:1}
+.rot-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:4}
+.rot-dots button{width:8px;height:8px;border-radius:50%;border:none;background:rgba(255,255,255,.3);cursor:pointer;padding:0;transition:all .25s}
+.rot-dots button.active{background:var(--red);width:22px;border-radius:4px}
+.img-slot.wide{aspect-ratio:16/10}
+.img-slot.tall{aspect-ratio:4/5}
+.img-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1}
+/* parallax interno: la imagen va escalada y se desplaza con el scroll */
+.px-img{will-change:transform;transform:scale(1.14)}
+.img-slot .slot-ph{display:none;position:relative;z-index:0;padding:1.5rem}
+.img-slot.show-ph .slot-ph{display:block}
+
+/* ---- SECTIONS SHARED ---- */
+section{padding:6rem 4rem}
+.section-tag{font-family:var(--cond);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.75rem;display:block}
+.section-title{font-family:var(--head);font-weight:900;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1;margin-bottom:1rem}
+/* los items de grid no deben forzar anchos mínimos que desborden el viewport */
+.kit-layout>*,.ba-layout>*,.dist-compact>*,.form-row>*{min-width:0}
+.form-field input,.form-field select{min-width:0;max-width:100%}
+.section-title span{color:var(--red)}
+.divider{width:60px;height:3px;background:var(--red);margin-bottom:2.5rem;border-radius:2px}
+
+/* ---- KIT CONTENTS ---- */
+.kit-sec{background:var(--blue-dark)}
+.kit-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.kit-table{display:flex;flex-direction:column;margin-top:1.5rem}
+.kit-row{display:grid;grid-template-columns:42px 1fr auto;gap:1rem;align-items:center;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.kit-idx{font-family:var(--head);font-weight:900;font-size:1.3rem;color:#fff;background:var(--red);width:34px;height:34px;border-radius:5px;display:flex;align-items:center;justify-content:center}
+.kit-name{font-family:var(--cond);font-weight:700;font-size:1.02rem;letter-spacing:.03em;text-transform:uppercase;color:#fff}
+.kit-sub{display:block;font-family:'Barlow',sans-serif;font-weight:400;font-size:.82rem;letter-spacing:.01em;text-transform:none;color:rgba(255,255,255,.65);margin-top:2px}
+.kit-detail{font-family:var(--cond);font-size:.8rem;font-weight:600;color:var(--cyan);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+
+/* ---- BEFORE / AFTER ---- */
+.ba-sec{background:var(--black)}
+.ba-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.ba-points{display:flex;flex-direction:column;gap:1.3rem;margin-top:1.5rem}
+.ba-point{display:flex;gap:1rem;align-items:flex-start}
+.ba-check{flex:0 0 auto;width:26px;height:26px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;margin-top:2px}
+.ba-point h4{font-family:var(--cond);font-size:1rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;margin-bottom:3px}
+.ba-point p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6}
+
+/* ---- SPACES CAROUSEL ---- */
+.spaces{background:var(--blue)}
+.spaces .section-title{color:#fff}
+.spaces-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-bottom:2.5rem}
+.spaces-tabs{display:flex;gap:.5rem;flex-wrap:wrap}
+.space-tab{font-family:var(--cond);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:8px 18px;border:1px solid rgba(255,255,255,.25);background:transparent;color:rgba(255,255,255,.7);cursor:pointer;border-radius:2px;transition:all .2s}
+.space-tab.active,.space-tab:hover{border-color:var(--red);color:#fff;background:var(--red)}
+.spaces-viewport{position:relative;overflow:hidden;border-radius:10px}
+.spaces-track{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1)}
+.space-slide{flex:0 0 100%;position:relative}
+.space-slide .img-slot{border:none;border-radius:0;min-height:0;aspect-ratio:16/7}
+.space-caption{position:absolute;left:0;bottom:0;z-index:3;padding:2rem 2.5rem;background:linear-gradient(0deg,rgba(2,29,58,.92) 0%,rgba(2,29,58,.55) 60%,transparent 100%);width:100%}
+.space-caption h3{font-family:var(--head);font-weight:900;font-size:clamp(1.6rem,3.5vw,2.6rem);text-transform:uppercase;color:#fff;line-height:1;margin-bottom:.4rem}
+.space-caption p{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.5;max-width:480px}
+.spaces-arrows{display:flex;gap:.5rem}
+.sp-arrow{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.06);color:#fff;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.sp-arrow:hover{background:var(--red);border-color:var(--red)}
+.spaces-dots{display:flex;gap:.5rem;justify-content:center;margin-top:1.5rem}
+.sp-dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.25);border:none;cursor:pointer;transition:all .2s;padding:0}
+.sp-dot.active{background:var(--red);width:26px;border-radius:5px}
+
+/* ---- PROCESS (3 steps with images) ---- */
+.process{background:var(--black)}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.process-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:8px;overflow:hidden;position:relative;display:flex;flex-direction:column}
+.process-card .img-slot{border:none;border-radius:0;min-height:0;aspect-ratio:4/3;border-bottom:1px solid rgba(255,255,255,.12)}
+.process-body{padding:1.8rem 1.7rem 2rem;position:relative}
+.process-num{display:none}
+.process-stage{font-family:var(--cond);font-weight:700;font-size:.7rem;letter-spacing:.15em;color:var(--red);text-transform:uppercase;margin-bottom:.5rem}
+.process-card h3{font-family:var(--cond);font-size:1.3rem;font-weight:800;text-transform:uppercase;margin-bottom:.6rem;color:#fff}
+.process-card p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.65}
+
+/* ---- RETAIL TICKER ---- */
+.retail-bar{background:#f0f0f0;border-top:1px solid rgba(0,0,0,.06);border-bottom:1px solid rgba(0,0,0,.06);overflow:hidden;position:relative}
+.retail-bar::before,.retail-bar::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
+.retail-bar::before{left:0;background:linear-gradient(90deg,#f0f0f0,transparent)}
+.retail-bar::after{right:0;background:linear-gradient(-90deg,#f0f0f0,transparent)}
+.retail-track{display:flex;align-items:center;width:max-content;animation:tickerReverse 35s linear infinite;padding:1.8rem 0;gap:0}
+.retail-track:hover{animation-play-state:paused}
+@keyframes tickerReverse{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+.retail-logo{display:flex;align-items:center;justify-content:center;padding:0 3rem;flex-shrink:0}
+.retail-logo img{height:55px;max-width:180px;object-fit:contain;transition:opacity .3s}
+.retail-logo img.invert-dark{filter:brightness(0)}
+
+/* ---- COUNTRY TICKER ---- */
+.country-section{background:linear-gradient(180deg,var(--blue-dark) 0%,#021d3a 100%);padding:3rem 0 3.2rem;position:relative;overflow:hidden}
+.country-head{text-align:center;margin-bottom:2rem;padding:0 1.5rem}
+.country-eyebrow{font-family:var(--cond);font-size:.7rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--cyan);margin-bottom:.6rem}
+.country-title{font-family:var(--head);font-weight:900;font-size:clamp(1.6rem,3.2vw,2.4rem);text-transform:uppercase;color:#fff;line-height:1;letter-spacing:.01em}
+.country-title b{color:var(--red);font-weight:900}
+.country-bar{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.country-track{display:flex;align-items:center;width:max-content;animation:tickerFwd 55s linear infinite;gap:.7rem;padding:.3rem 0}
+.country-track:hover{animation-play-state:paused}
+.country-item{display:flex;align-items:center;gap:.55rem;padding:.55rem 1.1rem;flex-shrink:0;white-space:nowrap;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:100px;transition:all .25s}
+.country-item:hover{background:rgba(255,255,255,.12);border-color:var(--cyan)}
+.country-item .flag{font-size:1.35rem;line-height:1}
+.country-item .cname{font-family:var(--cond);font-size:.9rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.92)}
+@keyframes tickerFwd{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ---- QUALITY ---- */
+.quality{background:var(--white);color:var(--black);padding:5.5rem 3rem;text-align:center;position:relative;overflow:hidden}
+.quality::before{content:'';position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--red),var(--blue))}
+.quality-pre{font-family:var(--cond);font-size:.75rem;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
+.quality h2{font-family:var(--cond);font-size:clamp(2rem,4vw,3rem);font-weight:900;text-transform:uppercase;color:var(--blue);line-height:1.1;margin-bottom:2rem}
+.quality-line{width:60px;height:3px;background:var(--red);margin:0 auto 2.5rem}
+.quality p{font-size:1.05rem;line-height:1.9;color:rgba(0,0,0,.7);max-width:760px;margin:0 auto 1.4rem;text-align:center}
+
+/* ---- DISTRIBUTOR (compact, at the end) ---- */
+.distributor{background:var(--blue-dark)}
+.dist-compact{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.dist-compact .section-title{margin-bottom:1rem}
+.dist-intro p{font-size:1rem;color:rgba(255,255,255,.78);line-height:1.7;margin-bottom:1.5rem;max-width:460px}
+.dist-quick{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.8rem}
+.dist-chip{font-family:var(--cond);font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:.5rem 1rem}
+.dist-form{background:var(--blue);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:2.5rem}
+.dist-form h3{font-family:var(--cond);font-size:1.4rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.5rem}
+.dist-form>p{font-size:.9rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.form-field{display:flex;flex-direction:column;gap:5px;margin-bottom:.75rem}
+.form-field label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.form-field input,.form-field select{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:10px 14px;font-family:'Barlow',sans-serif;font-size:14px;border-radius:3px;outline:none;transition:border-color .2s}
+.form-field input:focus,.form-field select:focus{border-color:var(--white)}
+.form-field select option{background:#222}
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-thanks{text-align:center;padding:1rem 0}
+.form-thanks .thanks-icon{width:64px;height:64px;margin:0 auto 1rem;border-radius:50%;background:var(--white);color:var(--blue);font-size:2rem;font-weight:900;display:flex;align-items:center;justify-content:center}
+.form-thanks h4{font-family:var(--cond);font-size:1.4rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#fff;margin-bottom:.5rem}
+.form-thanks p{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.6;max-width:340px;margin:0 auto}
+.form-submit{width:100%;background:var(--white);color:var(--blue);border:none;padding:14px;font-family:var(--cond);font-size:15px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:3px;margin-top:.5rem;transition:all .2s}
+.form-submit:hover{background:var(--red);color:var(--white)}
+
+/* ---- FOOTER ---- */
+footer{background:#080808;border-top:1px solid var(--border);padding:3rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem}
+footer img{height:42px}
+.footer-info{display:flex;flex-direction:column;gap:4px}
+.footer-info span{font-size:12.5px;color:var(--muted)}
+.footer-copy{font-size:11px;color:rgba(138,138,130,.5)}
+
+/* ---- ANIMACIONES ---- */
+/* Reveals seguros: la clase .rv (estado oculto) la aplica SOLO JS.
+   Sin JS, todo es visible — sin black flash. */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rv.rv-in{opacity:1;transform:translateY(0)}
+/* flotación sutil de la caja en el hero */
+@keyframes heroFloat{0%,100%{translate:0 0}50%{translate:0 -12px}}
+.hero-rotator .rot-img{animation:heroFloat 5.5s ease-in-out infinite}
+/* barrido de brillo en botones */
+.btn-primary,.nav-cta,.form-submit{position:relative;overflow:hidden}
+.btn-primary::after,.nav-cta::after,.form-submit::after{content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .55s ease;pointer-events:none}
+.btn-primary:hover::after,.nav-cta:hover::after,.form-submit:hover::after{left:130%}
+/* sombra del nav al scrollear */
+nav{transition:box-shadow .3s ease,background .3s ease}
+nav.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.45);background:rgba(2,45,88,.97)}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important;transition:none!important}.hero-rotator .rot-img{animation:none}.btn-primary::after,.nav-cta::after,.form-submit::after{display:none}}
+
+/* ---- RESPONSIVE ---- */
+@media(max-width:768px){
+  html,body{overflow-x:hidden}
+  nav{padding:0 .9rem;height:56px}
+  nav img.logo{height:28px;order:0;margin-right:auto}
+  .nav-right{order:1;display:flex;align-items:center;gap:.6rem}
+  .nav-burger{display:flex;order:2;margin-left:.4rem}
+  .lang-select{display:none}
+  .nav-cta{display:inline-block;padding:7px 12px;font-size:11px}
+  section{padding:3.5rem 1.25rem}
+  /* los slots con aspect-ratio definen su altura por el ancho; el min-height fijo
+     forzaba un ancho mínimo (240×ratio) que desbordaba el viewport */
+  .img-slot{min-height:0}
+  .kit-layout>*,.ba-layout>*,.dist-compact>*{min-width:0}
+  .section-title{overflow-wrap:break-word}
+  .hero{grid-template-columns:1fr;padding:6.5rem 1.25rem 3rem;text-align:center;min-height:auto}
+  .hero-left{padding:0}
+  .hero-content{max-width:100%;text-align:center;margin:0 auto}
+  .hero h1{font-size:clamp(2.8rem,12vw,4rem)}
+  .hero-sub{margin:0 auto 2rem;font-size:.85rem}
+  .hero-actions{justify-content:center}
+  .hero-actions a{flex:1;text-align:center;padding:13px 10px;font-size:12.5px;letter-spacing:.06em;white-space:nowrap}
+  .hero-stats{justify-content:center;gap:1.5rem 2rem;margin-top:2.5rem}
+  .hero-stat strong{font-size:2rem}
+  .hero-visual{padding:2.5rem 0 0;order:-1;max-width:440px;margin:0 auto;width:100%}
+  .img-slot.hero-slot{min-height:280px}
+  .retail-logo{padding:0 1.4rem}
+  .retail-logo img{height:34px;max-width:95px}
+  .country-section{padding:2.2rem 0 2.4rem}
+  .country-track{gap:.5rem}
+  .country-item{padding:.5rem .85rem;gap:.4rem}
+  .country-item .flag{font-size:1.15rem}
+  .country-item .cname{font-size:.8rem}
+  .kit-layout,.ba-layout,.dist-compact{grid-template-columns:1fr;gap:2.5rem}
+  .process-grid{grid-template-columns:1fr;gap:2.2rem}
+  .process-num{font-size:2.4rem;top:1.1rem}
+  .space-slide .img-slot{aspect-ratio:4/3}
+  .space-caption{padding:1.3rem 1.4rem}
+  .sp-arrow{display:none} /* en móvil: swipe + tabs + dots bastan */
+  .spaces-head{flex-direction:column;align-items:flex-start}
+  .spaces-tabs{width:100%}
+  .space-tab{flex:1;text-align:center;padding:8px 6px;font-size:12px}
+  .dist-form{padding:1.6rem}
+  .form-row{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center;padding:2.5rem 1.25rem}
+  .footer-info{align-items:center}
+}
+@media(prefers-reduced-motion:reduce){.retail-track,.country-track{animation:none}.spaces-track{transition:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <img class="logo" src="https://static.wixstatic.com/media/5917e7_ce163324f55a44a397dc3d9e860d370e~mv2.png" alt="Fusion Epoxy">
+  <div class="nav-right">
+    <select class="lang-select" id="lang-select" aria-label="Language">
+      <option value="es">ES Español</option>
+      <option value="en">EN English</option>
+      <option value="fr">FR Français</option>
+      <option value="de">DE Deutsch</option>
+      <option value="it">IT Italiano</option>
+      <option value="pl">PL Polski</option>
+      <option value="nl">NL Nederlands</option>
+      <option value="pt">PT Português</option>
+      <option value="lv">LV Latviešu</option>
+      <option value="fi">FI Suomi</option>
+    </select>
+    <button class="nav-cta" data-i18n="nav_cta" onclick="document.getElementById('distributor').scrollIntoView({behavior:'smooth'})">Ser Distribuidor</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mm-close" id="mm-close" aria-label="Close">&times;</button>
+  <nav class="mm-links">
+    <a href="#kit" data-i18n="mm_kit">El Kit</a>
+    <a href="#spaces" data-i18n="mm_spaces">Espacios</a>
+    <a href="#process" data-i18n="mm_process">Aplicación</a>
+    <a href="#distributor" data-i18n="mm_distributor">Ser Distribuidor</a>
+  </nav>
+  <div class="mm-lang">
+    <div class="mm-lang-label" data-i18n="mm_language">Idioma</div>
+    <div class="mm-lang-grid" id="mm-lang-grid"></div>
+  </div>
+</div>
+<div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div><div class="hero-glow2"></div>
+  <div class="hero-left">
+  <div class="hero-content">
+    <div class="hero-tag" data-i18n="hero_tag">Kit de Recubrimiento · Solo Interiores</div>
+    <h1 data-i18n-html="hero_h1">PISO<br><span style="color:#FF0110">EPÓXICO</span><br>FÁCIL.</h1>
+    <div class="brand-line">Piso Resistente en un Kit</div>
+    <p class="hero-sub" data-i18n="hero_sub">Kit de recubrimiento epóxico para hacerlo tú mismo. Acabado ultra brilloso tipo terrazo, listo en 48 horas. El SKU más reciente de Fusion Epoxy.</p>
+    <div class="hero-actions">
+      <a href="#kit" class="btn-primary" data-i18n="btn_kit">Ver el Kit</a>
+      <a href="#process" class="btn-outline" data-i18n="btn_process">Cómo se Aplica</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>35–40<span class="u"> M²</span></strong><span data-i18n="stat_coverage">Rinde por Kit</span></div>
+    <div class="hero-stat"><strong>48<span class="u"> H</span></strong><span data-i18n="stat_cure">Tiempo de Secado</span></div>
+    <div class="hero-stat"><strong>2:1</strong><span data-i18n="stat_formula">Fórmula</span></div>
+  </div>
+  </div>
+  <div class="hero-visual">
+    <!-- SLOT logo del producto Epoxy Floor (PNG/WebP transparente, horizontal) -->
+    <div class="hero-prodlogo">
+      <div class="img-slot">
+        <img src="images/logo-epoxy-floor.png" alt="Epoxy Floor" onerror="this.style.display='none';this.parentNode.classList.add('show-ph')">
+        <div class="slot-ph"><div class="slot-name">Logo Epoxy Floor</div><div class="slot-spec">images/logo-epoxy-floor.png · transparente · ~1000×400</div></div>
+      </div>
+    </div>
+    <!-- SLOT render/foto de la caja del producto (WebP transparente) -->
+    <div class="img-slot hero-slot hero-rotator" id="hero-rotator">
+      <img class="rot-img active" src="images/hero-caja-1.png" alt="Piso Epóxico Fácil — vista 1" onerror="this.dataset.failed='1';this.style.display='none';heroRotCheck()">
+      <img class="rot-img" src="images/hero-caja-2.png" alt="Piso Epóxico Fácil — vista 2" onerror="this.dataset.failed='1';this.style.display='none';heroRotCheck()">
+      <img class="rot-img" src="images/hero-caja-3.png" alt="Piso Epóxico Fácil — vista 3" onerror="this.dataset.failed='1';this.style.display='none';heroRotCheck()">
+      <img class="rot-img" src="images/hero-caja-4.png" alt="Piso Epóxico Fácil — vista 4" onerror="this.dataset.failed='1';this.style.display='none';heroRotCheck()">
+      <div class="slot-ph"><div class="slot-icon">📦</div><div class="slot-name">Hero — Caja del producto (4 vistas)</div><div class="slot-spec">images/hero-caja-1.png a hero-caja-4.png · transparente · ~1200×1200</div></div>
+      <div class="rot-dots" id="hero-rot-dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- KIT CONTENTS (al inicio) -->
+<section class="kit-sec" id="kit">
+  <div class="kit-layout">
+    <div>
+      <span class="section-tag" data-i18n="kit_tag">Contenido del kit</span>
+      <h2 class="section-title" data-i18n-html="kit_title">UN SOLO KIT PARA<br><span>HACERLO TÚ MISMO.</span></h2>
+      <div class="divider"></div>
+      <div class="kit-table">
+        <div class="kit-row"><span class="kit-idx">1</span><span class="kit-name"><span data-i18n="kit_i1">Parte A</span><span class="kit-sub" data-i18n="kit_i1s">Primario (con color) + Resina de acabado brillante</span></span><span class="kit-detail" data-i18n="kit_i1d">2 × 3.8 L</span></div>
+        <div class="kit-row"><span class="kit-idx">2</span><span class="kit-name"><span data-i18n="kit_i2">Parte B</span><span class="kit-sub" data-i18n="kit_i2s">Endurecedor</span></span><span class="kit-detail" data-i18n="kit_i2d">3.8 L</span></div>
+        <div class="kit-row"><span class="kit-idx">3</span><span class="kit-name" data-i18n="kit_i3">Esponjas de Rodillo</span><span class="kit-detail" data-i18n="kit_i3d">2 Unidades</span></div>
+        <div class="kit-row"><span class="kit-idx">4</span><span class="kit-name" data-i18n="kit_i4">Paletas de Mezclado</span><span class="kit-detail" data-i18n="kit_i4d">2 Unidades</span></div>
+        <div class="kit-row"><span class="kit-idx">5</span><span class="kit-name" data-i18n="kit_i5">Hojuelas Decorativas</span><span class="kit-detail" data-i18n="kit_i5d">1 KG</span></div>
+      </div>
+    </div>
+    <div>
+      <!-- SLOT imagen del desglose del kit -->
+      <div class="img-slot wide">
+        <img src="images/kit-contenido.png" alt="Contenido del kit" onerror="this.style.display='none';this.parentNode.classList.add('show-ph')">
+        <div class="slot-ph"><div class="slot-icon">🧰</div><div class="slot-name">Desglose del kit</div><div class="slot-spec">images/kit-contenido.png · ~1600×1000</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="ba-sec">
+  <div class="ba-layout">
+    <div>
+      <!-- SLOT antes/después -->
+      <div class="img-slot tall">
+        <img src="images/antes-despues.png" alt="Antes y después" onerror="this.style.display='none';this.parentNode.classList.add('show-ph')">
+        <div class="slot-ph"><div class="slot-icon">🔁</div><div class="slot-name">Antes / Después</div><div class="slot-spec">images/antes-despues.png · ~1200×1500</div></div>
+      </div>
+    </div>
+    <div>
+      <span class="section-tag" data-i18n="ba_tag">De concreto a acabado profesional</span>
+      <h2 class="section-title" data-i18n-html="ba_title">UN FIN DE SEMANA.<br><span>RESULTADO REAL.</span></h2>
+      <div class="divider"></div>
+      <div class="ba-points">
+        <div class="ba-point"><div class="ba-check">✓</div><div><h4 data-i18n="ba_p1t">Acabado ultra brilloso</h4><p data-i18n="ba_p1d">Aspecto tipo terrazo decorativo, sin contratar aplicadores profesionales.</p></div></div>
+        <div class="ba-point"><div class="ba-check">✓</div><div><h4 data-i18n="ba_p2t">Resistente y duradero</h4><p data-i18n="ba_p2d">Soporta químicos, gasolina y grasa — ideal para espacios de alto tránsito.</p></div></div>
+        <div class="ba-point"><div class="ba-check">✓</div><div><h4 data-i18n="ba_p3t">Autonivelante</h4><p data-i18n="ba_p3d">Cubre grietas y manchas del concreto y evita el desarrollo de hongo.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPACES CAROUSEL -->
+<section class="spaces" id="spaces">
+  <div class="spaces-head">
+    <div>
+      <span class="section-tag" data-i18n="spaces_tag">Un piso · múltiples espacios</span>
+      <h2 class="section-title" data-i18n-html="spaces_title">PENSADO PARA<br><span>CADA INTERIOR</span></h2>
+    </div>
+    <div class="spaces-tabs" id="spaces-tabs"></div>
+  </div>
+  <div class="spaces-viewport">
+    <div class="spaces-track" id="spaces-track"></div>
+  </div>
+  <div class="spaces-dots" id="spaces-dots"></div>
+</section>
+
+<!-- PROCESS (3 steps with images) -->
+<section class="process" id="process">
+  <span class="section-tag" data-i18n="proc_tag">Fácil de aplicar</span>
+  <h2 class="section-title" data-i18n-html="proc_title">3 PASOS.<br><span>48 HORAS.</span></h2>
+  <div class="divider"></div>
+  <div class="process-grid">
+    <div class="process-card">
+      <div class="img-slot"><img src="images/paso-1.png" alt="" onerror="this.style.display='none';this.parentNode.classList.add('show-ph')"><div class="slot-ph"><div class="slot-icon">🧹</div><div class="slot-spec">images/paso-1.png · ~900×675</div></div></div>
+      <div class="process-body"><div class="process-num">01</div><div class="process-stage" data-i18n="proc_s1s">Etapa 1 · Día 1</div><h3 data-i18n="proc_s1t">Prepara</h3><p data-i18n="proc_s1d">Limpia, aspira, lava y delimita. La adherencia depende 100% de la preparación.</p></div>
+    </div>
+    <div class="process-card">
+      <div class="img-slot"><img src="images/paso-2.png" alt="" onerror="this.style.display='none';this.parentNode.classList.add('show-ph')"><div class="slot-ph"><div class="slot-icon">🎨</div><div class="slot-spec">images/paso-2.png · ~900×675</div></div></div>
+      <div class="process-body"><div class="process-num">02</div><div class="process-stage" data-i18n="proc_s2s">Etapa 1 · Día 1</div><h3 data-i18n="proc_s2t">Primario + Hojuelas</h3><p data-i18n="proc_s2d">Mezcla la Parte A con la mitad de la Parte B. Aplica con rodillo y esparce las hojuelas en fresco.</p></div>
+    </div>
+    <div class="process-card">
+      <div class="img-slot"><img src="images/paso-3.png" alt="" onerror="this.style.display='none';this.parentNode.classList.add('show-ph')"><div class="slot-ph"><div class="slot-icon">✨</div><div class="slot-spec">images/paso-3.png · ~900×675</div></div></div>
+      <div class="process-body"><div class="process-num">03</div><div class="process-stage" data-i18n="proc_s3s">Etapa 2 · Día 2</div><h3 data-i18n="proc_s3t">Sella y Cura</h3><p data-i18n="proc_s3d">Aplica la resina con el endurecedor restante. Transitable en 48 horas, acabado ultra brilloso.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTRY TICKER -->
+<section class="country-section">
+  <div class="country-head">
+    <div class="country-eyebrow" data-i18n="country_eyebrow">25 Países · 5 Continentes</div>
+    <h2 class="country-title" data-i18n-html="country_title">Presencia <b>Internacional</b></h2>
+  </div>
+  <div class="country-bar"><div class="country-track" id="country-track"></div></div>
+</section>
+
+<!-- QUALITY -->
+<section class="quality">
+  <div class="quality-pre" data-i18n="q_pre">Nuestro Compromiso</div>
+  <h2 data-i18n="q_title">Política de Calidad</h2>
+  <div class="quality-line"></div>
+  <p data-i18n="q_p1">En Fusion Polymers estamos comprometidos a desarrollar y suministrar sistemas epóxicos de alta calidad, cumpliendo los requisitos de nuestros clientes así como los requisitos técnicos, regulatorios y legales aplicables, mediante el uso de materias primas de alta calidad.</p>
+  <p data-i18n="q_p2">Impulsamos la mejora continua de nuestros procesos, fortaleciendo la competencia de nuestro personal para asegurar la confiabilidad de nuestros productos y la satisfacción del cliente.</p>
+</section>
+
+<!-- DISTRIBUTOR (compact, at the end) -->
+<section class="distributor" id="distributor">
+  <div class="dist-compact">
+    <div class="dist-intro">
+      <span class="section-tag" data-i18n="dist_tag">Programa de socios</span>
+      <h2 class="section-title" data-i18n-html="dist_title">¿TE INTERESA<br><span>DISTRIBUIRLO?</span></h2>
+      <div class="divider"></div>
+      <p data-i18n="dist_p">Si quieres llevar el Piso Epóxico Fácil a tu mercado, cuéntanos sobre tu negocio. Nuestro equipo de ventas te contactará con precios, condiciones y disponibilidad de territorio.</p>
+      <div class="dist-quick">
+        <span class="dist-chip" data-i18n="dist_c1">Precio por volumen</span>
+        <span class="dist-chip" data-i18n="dist_c2">Exclusividad territorial</span>
+        <span class="dist-chip" data-i18n="dist_c3">Soporte de marketing</span>
+      </div>
+    </div>
+    <div class="dist-form">
+      <h3 data-i18n="form_title">Solicita Información</h3>
+      <p data-i18n="form_sub">Llena el formulario y nuestro equipo te contactará en menos de 24 horas hábiles.</p>
+      <form id="dist-inquiry-form">
+        <input type="hidden" name="access_key" value="2b7c2bae-4219-466e-b92d-a6353b3f7ae7">
+        <input type="hidden" name="subject" value="Nueva solicitud de distribuidor - Piso Epóxico Fácil">
+        <input type="hidden" name="from_name" value="Landing Piso Epóxico Fácil">
+        <input type="checkbox" name="botcheck" class="hp-field" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-row">
+          <div class="form-field"><label data-i18n="form_fname">Nombre</label><input type="text" name="Nombre" required></div>
+          <div class="form-field"><label data-i18n="form_lname">Apellido</label><input type="text" name="Apellido" required></div>
+        </div>
+        <div class="form-field"><label data-i18n="form_company">Empresa</label><input type="text" name="Empresa"></div>
+        <div class="form-row">
+          <div class="form-field"><label>Email</label><input type="email" name="Email" placeholder="tu@empresa.com" required></div>
+          <div class="form-field"><label data-i18n="form_phone">Teléfono / WhatsApp</label><input type="tel" name="Telefono"></div>
+        </div>
+        <div class="form-field"><label data-i18n="form_country">País</label>
+          <select name="Pais"><option value="">--</option><option>México</option><option>España</option><option>Estados Unidos</option><option>Canadá</option><option>Guatemala</option><option>Honduras</option><option>El Salvador</option><option>Nicaragua</option><option>Costa Rica</option><option>Panamá</option><option>Rep. Dominicana</option><option>Puerto Rico</option><option>Colombia</option><option>Venezuela</option><option>Ecuador</option><option>Perú</option><option>Bolivia</option><option>Brasil</option><option>Paraguay</option><option>Chile</option><option>Argentina</option><option>Uruguay</option><option>Reino Unido</option><option>Portugal</option><option>Japón</option><option data-i18n="form_other">Otro</option></select>
+        </div>
+        <button type="submit" class="form-submit" data-i18n="form_submit">Enviar Solicitud →</button>
+      </form>
+      <div class="form-thanks" id="dist-thanks" hidden>
+        <div class="thanks-icon">✓</div>
+        <h4 data-i18n="form_thx_title">¡Gracias!</h4>
+        <p data-i18n="form_thx_body">Hemos recibido tu solicitud. Nuestro equipo te contactará en menos de 24 horas hábiles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="https://static.wixstatic.com/media/5917e7_ce163324f55a44a397dc3d9e860d370e~mv2.png" alt="Fusion Epoxy">
+  <div class="footer-info">
+    <strong style="font-family:var(--cond);text-transform:uppercase">Fusion Polymers S.A. de C.V.</strong>
+    <span>www.fusionepoxy.com &nbsp;|&nbsp; help@fusionepoxy.us</span>
+    <span>+52 55 5034 9427</span>
+  </div>
+  <span class="footer-copy" data-i18n="footer_copy">©2026 Fusion Epoxy — Piso Resistente en un Kit. Todos los derechos reservados.</span>
+</footer>
+
+<script>
+// ---- DATOS ESTÁTICOS ----
+const COUNTRIES = [
+  ["🇨🇦","Canadá"],["🇺🇸","USA"],["🇲🇽","México"],["🇬🇹","Guatemala"],["🇭🇳","Honduras"],["🇸🇻","El Salvador"],
+  ["🇳🇮","Nicaragua"],["🇨🇷","Costa Rica"],["🇵🇦","Panamá"],["🇩🇴","Rep. Dominicana"],["🇵🇷","Puerto Rico"],
+  ["🇨🇴","Colombia"],["🇻🇪","Venezuela"],["🇪🇨","Ecuador"],["🇵🇪","Perú"],["🇧🇴","Bolivia"],["🇧🇷","Brasil"],
+  ["🇵🇾","Paraguay"],["🇨🇱","Chile"],["🇦🇷","Argentina"],["🇺🇾","Uruguay"],["🇬🇧","Reino Unido"],["🇵🇹","Portugal"],
+  ["🇪🇸","España"],["🇯🇵","Japón"]
+];
+// Espacios del carrusel: [clave i18n, icono fallback, ruta imagen]
+const SPACES = [
+  ["space_cocinas","🍳","images/espacio-cocinas.png"],
+  ["space_lavanderias","🧺","images/espacio-lavanderias.png"],
+  ["space_cocheras","🚗","images/espacio-cocheras.png"],
+  ["space_negocios","🏪","images/espacio-negocios.png"]
+];
+
+// ---- TRADUCCIONES ----
+const T = {
+es:{
+  nav_cta:"Ser Distribuidor",mm_kit:"El Kit",mm_spaces:"Espacios",mm_process:"Aplicación",mm_distributor:"Ser Distribuidor",mm_language:"Idioma",
+  hero_tag:"Kit de Recubrimiento · Solo Interiores",hero_h1:'PISO<br><span style="color:#FF0110">EPÓXICO</span><br>FÁCIL.',
+  hero_sub:"Kit de recubrimiento epóxico para hacerlo tú mismo. Acabado ultra brilloso tipo terrazo, listo en 48 horas. El SKU más reciente de Fusion Epoxy.",
+  btn_kit:"Ver el Kit",btn_process:"Cómo se Aplica",
+  stat_coverage:"Rinde por Kit",stat_cure:"Tiempo de Secado",stat_formula:"Fórmula",
+  kit_tag:"Contenido del kit",kit_title:'UN SOLO KIT PARA<br><span>HACERLO TÚ MISMO.</span>',
+  kit_i1:"Parte A",kit_i1s:"Primario (con color) + Resina de acabado brillante",kit_i1d:"2 × 3.8 L",
+  kit_i2:"Parte B",kit_i2s:"Endurecedor",kit_i2d:"3.8 L",
+  kit_i3:"Esponjas de Rodillo",kit_i3d:"2 Unidades",
+  kit_i4:"Paletas de Mezclado",kit_i4d:"2 Unidades",
+  kit_i5:"Hojuelas Decorativas",kit_i5d:"1 KG",
+  ba_tag:"De concreto a acabado profesional",ba_title:'UN FIN DE SEMANA.<br><span>RESULTADO REAL.</span>',
+  ba_p1t:"Acabado ultra brilloso",ba_p1d:"Aspecto tipo terrazo decorativo, sin contratar aplicadores profesionales.",
+  ba_p2t:"Resistente y duradero",ba_p2d:"Soporta químicos, gasolina y grasa — ideal para espacios de alto tránsito.",
+  ba_p3t:"Autonivelante",ba_p3d:"Cubre grietas y manchas del concreto y evita el desarrollo de hongo.",
+  spaces_tag:"Un piso · múltiples espacios",spaces_title:'PENSADO PARA<br><span>CADA INTERIOR</span>',
+  space_cocinas_t:"Cocinas",space_cocinas_d:"Acabado higiénico y fácil de limpiar para áreas de preparación de alimentos.",
+  space_lavanderias_t:"Lavanderías",space_lavanderias_d:"Resistente al agua y a la humedad constante del área de lavado.",
+  space_cocheras_t:"Cocheras",space_cocheras_d:"Soporta el peso del auto, llantas calientes, aceite y gasolina.",
+  space_negocios_t:"Negocios",space_negocios_d:"Imagen profesional y piso resistente al tránsito comercial diario.",
+  proc_tag:"Fácil de aplicar",proc_title:'3 PASOS.<br><span>48 HORAS.</span>',
+  proc_s1s:"Etapa 1 · Día 1",proc_s1t:"Prepara",proc_s1d:"Limpia, aspira, lava y delimita. La adherencia depende 100% de la preparación.",
+  proc_s2s:"Etapa 1 · Día 1",proc_s2t:"Primario + Hojuelas",proc_s2d:"Mezcla la Parte A con la mitad de la Parte B. Aplica con rodillo y esparce las hojuelas en fresco.",
+  proc_s3s:"Etapa 2 · Día 2",proc_s3t:"Sella y Cura",proc_s3d:"Aplica la resina con el endurecedor restante. Transitable en 48 horas, acabado ultra brilloso.",
+  country_eyebrow:"25 Países · 5 Continentes",country_title:"Presencia <b>Internacional</b>",
+  q_pre:"Nuestro Compromiso",q_title:"Política de Calidad",
+  q_p1:"En Fusion Polymers estamos comprometidos a desarrollar y suministrar sistemas epóxicos de alta calidad, cumpliendo los requisitos de nuestros clientes así como los requisitos técnicos, regulatorios y legales aplicables, mediante el uso de materias primas de alta calidad.",
+  q_p2:"Impulsamos la mejora continua de nuestros procesos, fortaleciendo la competencia de nuestro personal para asegurar la confiabilidad de nuestros productos y la satisfacción del cliente.",
+  dist_tag:"Programa de socios",dist_title:'¿TE INTERESA<br><span>DISTRIBUIRLO?</span>',
+  dist_p:"Si quieres llevar el Piso Epóxico Fácil a tu mercado, cuéntanos sobre tu negocio. Nuestro equipo de ventas te contactará con precios, condiciones y disponibilidad de territorio.",
+  dist_c1:"Precio por volumen",dist_c2:"Exclusividad territorial",dist_c3:"Soporte de marketing",
+  form_title:"Solicita Información",form_sub:"Llena el formulario y nuestro equipo te contactará en menos de 24 horas hábiles.",
+  form_fname:"Nombre",form_lname:"Apellido",form_company:"Empresa",form_country:"País",form_other:"Otro",form_phone:"Teléfono / WhatsApp",form_submit:"Enviar Solicitud →",
+  form_thx_title:"¡Gracias!",form_thx_body:"Hemos recibido tu solicitud. Nuestro equipo te contactará en menos de 24 horas hábiles.",
+  footer_copy:"©2026 Fusion Epoxy — Piso Resistente en un Kit. Todos los derechos reservados."
+},
+en:{
+  nav_cta:"Become a Distributor",mm_kit:"The Kit",mm_spaces:"Spaces",mm_process:"Application",mm_distributor:"Become a Distributor",mm_language:"Language",
+  hero_tag:"Coating Kit · Indoor Use Only",hero_h1:'EASY<br><span style="color:#FF0110">EPOXY</span><br>FLOOR.',
+  hero_sub:"DIY epoxy floor coating kit. Ultra-gloss terrazzo finish, ready in 48 hours. The newest SKU from Fusion Epoxy.",
+  btn_kit:"View the Kit",btn_process:"How to Apply",
+  stat_coverage:"Coverage per Kit",stat_cure:"Cure Time",stat_formula:"Formula",
+  kit_tag:"Kit contents",kit_title:'ONE KIT TO<br><span>DO IT YOURSELF.</span>',
+  kit_i1:"Part A",kit_i1s:"Primer (with color) + Gloss-finish resin",kit_i1d:"2 × 3.8 L",
+  kit_i2:"Part B",kit_i2s:"Hardener",kit_i2d:"3.8 L",
+  kit_i3:"Roller Sponges",kit_i3d:"2 Units",
+  kit_i4:"Mixing Paddles",kit_i4d:"2 Units",kit_i5:"Decorative Flakes",kit_i5d:"1 KG",
+  ba_tag:"From raw concrete to a pro finish",ba_title:'ONE WEEKEND.<br><span>REAL RESULTS.</span>',
+  ba_p1t:"Ultra-gloss finish",ba_p1d:"Decorative terrazzo look, with no need to hire professional applicators.",
+  ba_p2t:"Tough and durable",ba_p2d:"Withstands chemicals, gasoline and grease — ideal for high-traffic spaces.",
+  ba_p3t:"Self-leveling",ba_p3d:"Covers concrete cracks and stains and resists mold growth.",
+  spaces_tag:"One floor · many spaces",spaces_title:'BUILT FOR<br><span>EVERY INTERIOR</span>',
+  space_cocinas_t:"Kitchens",space_cocinas_d:"Hygienic, easy-to-clean finish for food prep areas.",
+  space_lavanderias_t:"Laundry Rooms",space_lavanderias_d:"Resistant to water and the constant humidity of the wash area.",
+  space_cocheras_t:"Garages",space_cocheras_d:"Handles car weight, hot tires, oil and gasoline.",
+  space_negocios_t:"Businesses",space_negocios_d:"Professional image and a floor that withstands daily commercial traffic.",
+  proc_tag:"Easy to apply",proc_title:'3 STEPS.<br><span>48 HOURS.</span>',
+  proc_s1s:"Stage 1 · Day 1",proc_s1t:"Prep",proc_s1d:"Clean, vacuum, wash and mask off. Adhesion depends 100% on prep.",
+  proc_s2s:"Stage 1 · Day 1",proc_s2t:"Primer + Flakes",proc_s2d:"Mix Part A with half of Part B. Roll it on and scatter the flakes while wet.",
+  proc_s3s:"Stage 2 · Day 2",proc_s3t:"Seal & Cure",proc_s3d:"Apply the resin with the remaining hardener. Walk-on in 48 hours, ultra-gloss finish.",
+  country_eyebrow:"25 Countries · 5 Continents",country_title:"Global <b>Presence</b>",
+  q_pre:"Our Commitment",q_title:"Quality Policy",
+  q_p1:"At Fusion Polymers we are committed to developing and supplying high-quality epoxy systems, meeting our customers' requirements as well as the applicable technical, regulatory and legal requirements, through the use of high-quality raw materials.",
+  q_p2:"We drive continuous improvement of our processes, strengthening the competence of our personnel to ensure the reliability of our products and customer satisfaction.",
+  dist_tag:"Partner program",dist_title:'WANT TO<br><span>DISTRIBUTE IT?</span>',
+  dist_p:"If you'd like to bring the Easy Epoxy Floor to your market, tell us about your business. Our sales team will reach out with pricing, terms and territory availability.",
+  dist_c1:"Volume pricing",dist_c2:"Territory exclusivity",dist_c3:"Marketing support",
+  form_title:"Request Information",form_sub:"Fill out the form and our team will contact you within 24 business hours.",
+  form_fname:"First Name",form_lname:"Last Name",form_company:"Company",form_country:"Country",form_other:"Other",form_phone:"Phone / WhatsApp",form_submit:"Send Inquiry →",
+  form_thx_title:"Thank you!",form_thx_body:"Your inquiry has been received. Our team will contact you within 24 business hours.",
+  footer_copy:"©2026 Fusion Epoxy — A Tough Floor in One Kit. All Rights Reserved."
+},
+fr:{nav_cta:"Devenir Distributeur",hero_tag:"Kit de Revêtement · Intérieur Uniquement",hero_h1:'SOL<br><span style="color:#FF0110">ÉPOXY</span><br>FACILE.',hero_sub:"Kit de revêtement de sol époxy à faire soi-même. Finition ultra-brillante effet terrazzo, prêt en 48 heures.",btn_kit:"Voir le Kit",btn_process:"Comment l'Appliquer",kit_title:'UN SEUL KIT POUR<br><span>LE FAIRE VOUS-MÊME.</span>',ba_title:'UN WEEK-END.<br><span>RÉSULTAT RÉEL.</span>',spaces_title:'CONÇU POUR<br><span>CHAQUE INTÉRIEUR</span>',proc_title:'3 ÉTAPES.<br><span>48 HEURES.</span>',dist_title:'INTÉRESSÉ PAR<br><span>LA DISTRIBUTION ?</span>',form_submit:"Envoyer la Demande →",form_thx_title:"Merci !"},
+de:{nav_cta:"Händler Werden",hero_tag:"Beschichtungs-Kit · Nur Innenbereich",hero_h1:'EINFACHER<br><span style="color:#FF0110">EPOXID</span><br>BODEN.',hero_sub:"DIY-Epoxidboden-Beschichtungskit. Ultraglänzendes Terrazzo-Finish, fertig in 48 Stunden.",btn_kit:"Kit Ansehen",btn_process:"So Wird's Gemacht",kit_title:'EIN KIT, UM ES<br><span>SELBST ZU MACHEN.</span>',ba_title:'EIN WOCHENENDE.<br><span>ECHTES ERGEBNIS.</span>',spaces_title:'FÜR JEDEN<br><span>INNENRAUM</span>',proc_title:'3 SCHRITTE.<br><span>48 STUNDEN.</span>',dist_title:'INTERESSE AM<br><span>VERTRIEB?</span>',form_submit:"Anfrage Senden →",form_thx_title:"Danke!"},
+it:{nav_cta:"Diventa Distributore",hero_tag:"Kit di Rivestimento · Solo Interni",hero_h1:'PAVIMENTO<br><span style="color:#FF0110">EPOSSIDICO</span><br>FACILE.',hero_sub:"Kit fai-da-te per pavimento epossidico. Finitura ultra-lucida effetto terrazzo, pronto in 48 ore.",btn_kit:"Vedi il Kit",btn_process:"Come si Applica",kit_title:'UN SOLO KIT PER<br><span>FARLO DA SOLO.</span>',ba_title:'UN WEEKEND.<br><span>RISULTATO REALE.</span>',spaces_title:'PENSATO PER<br><span>OGNI INTERNO</span>',proc_title:'3 PASSI.<br><span>48 ORE.</span>',dist_title:'TI INTERESSA<br><span>DISTRIBUIRLO?</span>',form_submit:"Invia Richiesta →",form_thx_title:"Grazie!"},
+pl:{nav_cta:"Zostań Dystrybutorem",hero_tag:"Zestaw Powłokowy · Tylko Wnętrza",hero_h1:'ŁATWA<br><span style="color:#FF0110">POSADZKA</span><br>EPOKSYDOWA.',hero_sub:"Zestaw DIY do posadzki epoksydowej. Ultrabłyszczące wykończenie typu lastryko, gotowe w 48 godzin.",btn_kit:"Zobacz Zestaw",btn_process:"Jak Aplikować",kit_title:'JEDEN ZESTAW, BY<br><span>ZROBIĆ TO SAMEMU.</span>',ba_title:'JEDEN WEEKEND.<br><span>REALNY EFEKT.</span>',spaces_title:'DO KAŻDEGO<br><span>WNĘTRZA</span>',proc_title:'3 KROKI.<br><span>48 GODZIN.</span>',dist_title:'CHCESZ TO<br><span>DYSTRYBUOWAĆ?</span>',form_submit:"Wyślij Zapytanie →",form_thx_title:"Dziękujemy!"},
+nl:{nav_cta:"Word Distributeur",hero_tag:"Coatingkit · Alleen Binnen",hero_h1:'EENVOUDIGE<br><span style="color:#FF0110">EPOXY</span><br>VLOER.',hero_sub:"DIY epoxyvloer-coatingkit. Ultra-glanzende terrazzo-afwerking, klaar in 48 uur.",btn_kit:"Bekijk de Kit",btn_process:"Hoe Aanbrengen",kit_title:'ÉÉN KIT OM HET<br><span>ZELF TE DOEN.</span>',ba_title:'ÉÉN WEEKEND.<br><span>ECHT RESULTAAT.</span>',spaces_title:'GEMAAKT VOOR<br><span>ELK INTERIEUR</span>',proc_title:'3 STAPPEN.<br><span>48 UUR.</span>',dist_title:'WIL JE HET<br><span>DISTRIBUEREN?</span>',form_submit:"Aanvraag Versturen →",form_thx_title:"Bedankt!"},
+pt:{nav_cta:"Seja Distribuidor",hero_tag:"Kit de Revestimento · Só Interiores",hero_h1:'PISO<br><span style="color:#FF0110">EPÓXI</span><br>FÁCIL.',hero_sub:"Kit DIY de revestimento epóxi. Acabamento ultra brilhoso tipo terrazzo, pronto em 48 horas.",btn_kit:"Ver o Kit",btn_process:"Como Aplicar",kit_title:'UM SÓ KIT PARA<br><span>FAZER VOCÊ MESMO.</span>',ba_title:'UM FIM DE SEMANA.<br><span>RESULTADO REAL.</span>',spaces_title:'PENSADO PARA<br><span>CADA INTERIOR</span>',proc_title:'3 PASSOS.<br><span>48 HORAS.</span>',dist_title:'QUER<br><span>DISTRIBUIR?</span>',form_submit:"Enviar Solicitação →",form_thx_title:"Obrigado!"},
+lv:{nav_cta:"Kļūt par Izplatītāju",hero_tag:"Pārklājuma Komplekts · Tikai Iekštelpām",hero_h1:'VIEGLA<br><span style="color:#FF0110">EPOKSĪDA</span><br>GRĪDA.',hero_sub:"DIY epoksīda grīdas pārklājuma komplekts. Īpaši spīdīga teraco apdare, gatava 48 stundās.",btn_kit:"Skatīt Komplektu",btn_process:"Kā Uzklāt",kit_title:'VIENS KOMPLEKTS, LAI<br><span>PAVEIKTU PAŠAM.</span>',ba_title:'VIENA NEDĒĻAS NOGALE.<br><span>REĀLS REZULTĀTS.</span>',spaces_title:'DOMĀTS KATRAM<br><span>INTERJERAM</span>',proc_title:'3 SOĻI.<br><span>48 STUNDAS.</span>',dist_title:'VĒLIES TO<br><span>IZPLATĪT?</span>',form_submit:"Nosūtīt Pieprasījumu →",form_thx_title:"Paldies!"},
+fi:{nav_cta:"Ryhdy Jälleenmyyjäksi",hero_tag:"Pinnoitussarja · Vain Sisätiloihin",hero_h1:'HELPPO<br><span style="color:#FF0110">EPOKSI</span><br>LATTIA.',hero_sub:"DIY-epoksilattian pinnoitussarja. Ultrakiiltävä terrazzo-pinta, valmis 48 tunnissa.",btn_kit:"Katso Sarja",btn_process:"Näin Levität",kit_title:'YKSI SARJA, JOLLA<br><span>TEET SEN ITSE.</span>',ba_title:'YKSI VIIKONLOPPU.<br><span>AITO TULOS.</span>',spaces_title:'JOKAISEEN<br><span>SISÄTILAAN</span>',proc_title:'3 VAIHETTA.<br><span>48 TUNTIA.</span>',dist_title:'HALUATKO<br><span>JÄLLEENMYYDÄ?</span>',form_submit:"Lähetä Pyyntö →",form_thx_title:"Kiitos!"}
+};
+
+// ---- ANIMACIONES DE ENTRADA (seguras: el estado oculto lo aplica solo JS) ----
+function revInit(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(!('IntersectionObserver' in window)) return;
+  // entrada del hero al cargar (escalonada)
+  const heroEls=[...document.querySelectorAll('.hero-content > *'),document.querySelector('.hero-stats')];
+  heroEls.forEach((el,i)=>{
+    if(!el) return;
+    el.classList.add('rv');
+    el.style.transitionDelay=(i*0.09)+'s';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>el.classList.add('rv-in')));
+  });
+  // reveals al entrar en viewport
+  const groups=[
+    '.section-tag','.section-title','.divider',
+    '.kit-row','.ba-point','.process-card','.dist-chip','.why-card','.dist-form'
+  ];
+  const els=document.querySelectorAll(groups.join(','));
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){ en.target.classList.add('rv-in'); io.unobserve(en.target); }
+    });
+  },{threshold:0,rootMargin:'0px 0px -4% 0px'});
+  els.forEach(el=>{
+    if(el.closest('.hero')) return; // el hero ya tiene su propia entrada
+    el.classList.add('rv');
+    // stagger entre hermanos del mismo tipo dentro del mismo padre
+    const sibs=[...el.parentNode.children].filter(s=>s.classList.contains(el.classList[0]));
+    const idx=sibs.indexOf(el);
+    if(idx>0) el.style.transitionDelay=(idx*0.08)+'s';
+    io.observe(el);
+  });
+  // sombra del nav al despegarse del hero
+  const nav=document.querySelector('nav');
+  window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50);},{passive:true});
+}
+
+// ---- PARALLAX (proporcional al scroll, sin triggers) ----
+let pxEls=[], pxOn=false, pxTicking=false;
+function pxInit(){
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const mobile=window.matchMedia('(max-width: 768px)').matches;
+  if(reduced||mobile) return; // desactivado en móvil y reduced-motion
+  // imágenes con parallax interno (excluye el rotador del hero, que usa object-fit contain)
+  document.querySelectorAll('.kit-sec .img-slot img, .ba-sec .img-slot img, .space-slide .img-slot img, .process-card .img-slot img').forEach(img=>{
+    img.classList.add('px-img'); pxEls.push(img);
+  });
+  pxOn=true;
+  window.addEventListener('scroll',pxRequest,{passive:true});
+  window.addEventListener('resize',pxRequest,{passive:true});
+  pxUpdate();
+}
+function pxRequest(){ if(!pxTicking){ pxTicking=true; requestAnimationFrame(pxUpdate); } }
+function pxUpdate(){
+  pxTicking=false; if(!pxOn) return;
+  const wh=window.innerHeight, sy=window.scrollY;
+  // capas del hero a distinta velocidad (solo mientras el hero es visible)
+  if(sy<wh*1.2){
+    const g=document.querySelector('.hero-grid'), r=document.querySelector('.hero-glow'), b=document.querySelector('.hero-glow2');
+    if(g) g.style.transform=`translateY(${sy*0.18}px)`;
+    if(r) r.style.transform=`translateY(${sy*0.30}px)`;
+    if(b) b.style.transform=`translateY(${sy*-0.22}px)`;
+  }
+  // imágenes: desplazamiento según posición del contenedor en viewport
+  pxEls.forEach(img=>{
+    const rect=img.parentNode.getBoundingClientRect();
+    if(rect.bottom<-60||rect.top>wh+60) return; // fuera de pantalla
+    const progress=(rect.top+rect.height/2-wh/2)/(wh/2+rect.height/2); // -1 .. 1
+    const shift=Math.max(-1,Math.min(1,progress))*-26; // ±26px
+    img.style.transform=`scale(1.14) translateY(${shift}px)`;
+  });
+}
+
+// ---- ROTADOR HERO (3 vistas de la caja) ----
+let heroRotTimer=null, heroRotIdx=0;
+function heroRotCheck(){
+  // si todas fallaron, mostrar placeholder
+  const imgs=[...document.querySelectorAll('#hero-rotator .rot-img')];
+  if(imgs.every(i=>i.dataset.failed)){
+    document.getElementById('hero-rotator').classList.add('show-ph');
+    const d=document.getElementById('hero-rot-dots'); if(d) d.style.display='none';
+  }
+}
+function heroRotGo(n){
+  const imgs=[...document.querySelectorAll('#hero-rotator .rot-img')].filter(i=>!i.dataset.failed);
+  if(imgs.length<1) return;
+  heroRotIdx=(n+imgs.length)%imgs.length;
+  imgs.forEach((im,i)=>im.classList.toggle('active',i===heroRotIdx));
+  document.querySelectorAll('#hero-rot-dots button').forEach((d,i)=>d.classList.toggle('active',i===heroRotIdx));
+}
+function heroRotInit(){
+  const imgs=[...document.querySelectorAll('#hero-rotator .rot-img')].filter(i=>!i.dataset.failed);
+  const dots=document.getElementById('hero-rot-dots');
+  if(imgs.length<=1){ if(dots) dots.style.display='none'; return; }
+  dots.innerHTML=imgs.map((_,i)=>`<button${i===0?' class="active"':''} aria-label="Vista ${i+1}"></button>`).join('');
+  dots.addEventListener('click',e=>{
+    const b=e.target.closest('button'); if(!b) return;
+    heroRotGo([...dots.children].indexOf(b));
+    clearInterval(heroRotTimer);
+    heroRotTimer=setInterval(()=>heroRotGo(heroRotIdx+1),3500);
+  });
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduced) heroRotTimer=setInterval(()=>heroRotGo(heroRotIdx+1),3500);
+}
+
+// ---- RENDER ----
+let spaceIdx = 0;
+// autoplay del carrusel de espacios: avanza cada 4.5 s; cualquier interacción manual reinicia el timer
+let spaceTimer = null;
+function spaceAutoStart(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  clearInterval(spaceTimer);
+  spaceTimer = setInterval(()=>goSpace(spaceIdx+1), 4500);
+}
+function spaceAutoReset(){ spaceAutoStart(); }
+function buildStatic(){
+  // country ticker (duplicado para loop)
+  const ct = COUNTRIES.map(([f,n])=>`<div class="country-item"><span class="flag">${f}</span><span class="cname">${n}</span></div>`).join('');
+  document.getElementById('country-track').innerHTML = ct + ct;
+  // carrusel de espacios
+  document.getElementById('spaces-track').innerHTML = SPACES.map(([k,ic,img])=>
+    `<div class="space-slide">`+
+      `<div class="img-slot"><img src="${img}" alt="" onerror="this.style.display='none';this.parentNode.classList.add('show-ph')">`+
+      `<div class="slot-ph"><div class="slot-icon">${ic}</div><div class="slot-spec">${img} · ~1600×700</div></div></div>`+
+      `<div class="space-caption"><h3 data-i18n="${k}_t"></h3><p data-i18n="${k}_d"></p></div>`+
+    `</div>`).join('');
+  document.getElementById('spaces-tabs').innerHTML =
+    `<button class="sp-arrow" id="sp-prev" aria-label="Anterior">‹</button>`+
+    SPACES.map(([k],i)=>`<button class="space-tab${i===0?' active':''}" data-idx="${i}" data-i18n="${k}_t"></button>`).join('')+
+    `<button class="sp-arrow" id="sp-next" aria-label="Siguiente">›</button>`;
+  document.getElementById('spaces-dots').innerHTML = SPACES.map((_,i)=>
+    `<button class="sp-dot${i===0?' active':''}" data-idx="${i}" aria-label="Ir a ${i+1}"></button>`).join('');
+}
+function goSpace(i){
+  spaceIdx = (i+SPACES.length)%SPACES.length;
+  document.getElementById('spaces-track').style.transform = `translateX(-${spaceIdx*100}%)`;
+  document.querySelectorAll('.space-tab').forEach((t,n)=>t.classList.toggle('active',n===spaceIdx));
+  document.querySelectorAll('.sp-dot').forEach((d,n)=>d.classList.toggle('active',n===spaceIdx));
+}
+
+// ---- i18n con fallback a español ----
+function setLang(lang){
+  const t = T[lang] || T.es, base = T.es;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n'); const v=(t[k]!==undefined)?t[k]:base[k];
+    if(v!==undefined) el.textContent=v;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const k=el.getAttribute('data-i18n-html'); const v=(t[k]!==undefined)?t[k]:base[k];
+    if(v!==undefined) el.innerHTML=v;
+  });
+  document.getElementById('lang-select').value=lang;
+  document.querySelectorAll('#mm-lang-grid button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  buildStatic();
+  revInit();
+  pxInit();
+  setTimeout(heroRotInit,400); // espera a que los onerror de vistas faltantes se disparen
+  document.getElementById('lang-select').addEventListener('change',e=>setLang(e.target.value));
+  // carrusel: tabs, flechas, dots
+  document.getElementById('spaces-tabs').addEventListener('click',e=>{
+    const t=e.target.closest('.space-tab'); if(t){goSpace(+t.dataset.idx);spaceAutoReset();return;}
+    if(e.target.id==='sp-prev'){goSpace(spaceIdx-1);spaceAutoReset();}
+    if(e.target.id==='sp-next'){goSpace(spaceIdx+1);spaceAutoReset();}
+  });
+  document.getElementById('spaces-dots').addEventListener('click',e=>{
+    const d=e.target.closest('.sp-dot'); if(d){goSpace(+d.dataset.idx);spaceAutoReset();}
+  });
+  // swipe táctil
+  const vp=document.querySelector('.spaces-viewport'); let x0=null;
+  vp.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+  vp.addEventListener('touchend',e=>{
+    if(x0===null) return; const dx=e.changedTouches[0].clientX-x0;
+    if(Math.abs(dx)>45){goSpace(spaceIdx+(dx<0?1:-1));spaceAutoReset();} x0=null;
+  },{passive:true});
+  // pausa el autoplay con el cursor encima, reanuda al salir
+  vp.addEventListener('mouseenter',()=>clearInterval(spaceTimer));
+  vp.addEventListener('mouseleave',spaceAutoStart);
+  spaceAutoStart();
+
+  // menú móvil
+  const sel=document.getElementById('lang-select'), grid=document.getElementById('mm-lang-grid');
+  grid.innerHTML=Array.from(sel.options).map(o=>`<button data-lang="${o.value}">${o.textContent}</button>`).join('');
+  const menu=document.getElementById('mobile-menu'), ovl=document.getElementById('mobile-menu-overlay');
+  function openMenu(){menu.classList.add('open');ovl.classList.add('open');document.body.classList.add('menu-open');}
+  function closeMenu(){menu.classList.remove('open');ovl.classList.remove('open');document.body.classList.remove('menu-open');}
+  grid.addEventListener('click',e=>{const b=e.target.closest('button');if(b){setLang(b.dataset.lang);closeMenu();}});
+  document.getElementById('nav-burger').addEventListener('click',openMenu);
+  document.getElementById('mm-close').addEventListener('click',closeMenu);
+  ovl.addEventListener('click',closeMenu);
+  document.querySelectorAll('.mm-links a').forEach(a=>a.addEventListener('click',closeMenu));
+
+  // Web3Forms
+  const inqForm=document.getElementById('dist-inquiry-form');
+  inqForm.addEventListener('submit',async(e)=>{
+    e.preventDefault();
+    const data=new FormData(inqForm);
+    try{
+      const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:data});
+      const json=await res.json();
+      if(!json.success) throw new Error(json.message||'Error');
+    }catch(err){ alert('Hubo un problema al enviar. Inténtalo de nuevo o escríbenos por correo.'); return; }
+    inqForm.hidden=true; document.getElementById('dist-thanks').hidden=false;
+  });
+
+  setLang('es'); // español por defecto
+});
+</script>
+</body>
+</html>
